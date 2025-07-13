@@ -1,0 +1,709 @@
+			<h1 style="margin-top:24pt; margin-bottom:0pt; page-break-inside:avoid; page-break-after:avoid; line-height:115%; font-size:14pt">
+				<span style="font-family:Calibri; color:#365f91">Digitales Notfall-Kit - HTML Code</span>
+			</h1>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&lt;!DOCTYPE html&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&lt;html lang="de"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&lt;head&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0; &lt;meta charset="UTF-8" /&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0; &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0; &lt;title&gt;Digitales Notfall-Kit&lt;/title&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0; &lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0; &lt;script&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0; tailwind.config = {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; darkMode: 'class',
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; theme: {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; extend: {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; colors: {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; punkPurple: '#7e1e9c',
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; acidYellow: '#fffb00',
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; bloodOrange: '#f2542d',
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; hawBlue: '#005ca9',
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; glitchBlue: '#00f7ff',
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; rebelPink: '#f5009c',
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; grime: '#1a1a1a',
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; bone: '#fefcfb'
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; },
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; fontFamily: {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; headline: ['"Rock Salt"', 'cursive'],
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; body: ['"Courier Prime"', 'monospace']
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0; };
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0; &lt;/script&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0; &lt;script src="https://unpkg.com/lucide@latest"&gt;&lt;/script&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0; &lt;link href="https://fonts.googleapis.com/css2?family=Courier+Prime&amp;family=Rock+Salt&amp;display=swap" rel="stylesheet" /&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0; &lt;style&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0; body {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; font-family: 'Courier Prime', monospace;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; background-image: url('https://www.transparenttextures.com/patterns/cardboard-flat.png');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; background-repeat: repeat;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0; .headline {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; font-family: 'Rock Salt', cursive;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0; .btn {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; @apply px-5 py-3 rounded-full text-sm font-bold inline-flex items-center gap-2 border border-black shadow-md hover:scale-105 active:scale-95 transition duration-200 ease-in-out;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0; &lt;/style&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&lt;/head&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&lt;body class="bg-bone text-grime dark:bg-grime dark:text-bone"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0; &lt;header class="flex justify-between items-center px-6 py-4 bg-punkPurple text-acidYellow sticky top-0 z-50 shadow-md"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0; &lt;h1 class="text-2xl md:text-3xl headline"&gt;👁️ Digitales Notfall-Kit&lt;/h1&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0; &lt;div class="flex gap-2"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;button id="lang-toggle" class="btn bg-acidYellow text-black hover:bg-yellow-300"&gt;🌍 EN/DE&lt;/button&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;button id="restart-btn" class="btn bg-acidYellow text-black hover:bg-yellow-300"&gt;&lt;i data-lucide="flame"&gt;&lt;/i&gt; Burn it&lt;/button&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;button id="darkmode-toggle" class="btn bg-acidYellow text-black hover:bg-yellow-300"&gt;&lt;i data-lucide="moon"&gt;&lt;/i&gt;&lt;/button&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0; &lt;/header&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0; &lt;main id="app-container" class="max-w-3xl mx-auto px-4 py-6"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0; &lt;div id="intro-page-1" class="bg-grime text-bone p-8 rounded-lg shadow-xl border-4 border-rebelPink"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;h2 class="headline text-4xl mb-4 text-acidYellow"&gt;👁️ Meet Your Digital Shadow&lt;/h2&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;p class="mb-6"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; You ever wake up and feel like your phone knows your dreams? That’s not magic. That’s capitalism with binoculars.
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; This ain’t a zine, it’s group therapy for people who know that clearing your browser history won’t delete your sins... or your metadata.
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;/p&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;p class="italic text-sm text-glitchBlue"&gt;“Big Brother got a podcast now — and you’re the main topic.”&lt;/p&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;div class="flex flex-col items-center gap-4 mt-8"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;button id="start-zine-btn" class="btn px-8 py-4 bg-acidYellow text-black text-lg hover:bg-yellow-300"&gt;Ich bin bereit&lt;/button&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0; &lt;div id="intro-page-2" class="hidden bg-grime text-bone p-8 rounded-lg shadow-xl border-4 border-rebelPink"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;h2 class="headline text-3xl mb-3 text-glitchBlue"&gt;Tools for the Digitally Hunted&lt;/h2&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;p class="mb-4"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; This is your field guide to digital self-defense — for people too smart for tinfoil hats and too tired for 12-hour YouTube rabbit holes.
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; If you think “I’ve got nothing to hide” sounds like freedom, congrats: You’ve already lost.
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;/p&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;p class="text-sm italic text-rebelPink"&gt;“Privacy is like deodorant. You don’t think about it... until someone stinks.”&lt;/p&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;div class="flex flex-col items-center gap-4 mt-8"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;button id="next-module-btn-intro" class="btn px-8 py-4 bg-acidYellow text-black text-lg hover:bg-yellow-300"&gt;No one zines better&lt;/button&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0; &lt;div id="module-container" class="hidden"&gt;&lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0; &lt;div id="download-page" class="hidden bg-grime text-bone p-8 rounded-lg shadow-xl border-4 border-glitchBlue max-w-3xl mx-auto"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;h2 class="headline text-3xl mb-4 text-acidYellow"&gt;Dein Zine ist fertig. Pure Rebellion.&lt;/h2&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;p class="mb-4"&gt;Druck es. Kopier es. Häng es an Laternenpfähle. Dein Manifest gegen digitalen Faschismus.&lt;/p&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;div class="flex flex-row justify-center gap-4"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;a id="zine-download-link" href="#" download class="btn bg-acidYellow text-black hover:bg-yellow-300 inline-flex items-center gap-2 text-xl"&gt;&lt;i data-lucide="download"&gt;&lt;/i&gt; &lt;span&gt;Download&lt;/span&gt;&lt;/a&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;button id="print-zine-btn" class="btn bg-acidYellow text-black hover:bg-yellow-300 inline-flex items-center gap-2 text-xl"&gt;&lt;i data-lucide="printer"&gt;&lt;/i&gt; &lt;span&gt;Drucken&lt;/span&gt;&lt;/button&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0; &lt;div class="flex justify-end mt-1 mb-2"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;button id="go-to-conclusion-btn" class="btn bg-hawBlue text-white hover:bg-blue-700 hidden inline-flex items-center gap-2"&gt;&lt;i data-lucide="search"&gt;&lt;/i&gt;&lt;span&gt;Quellen &amp; Widerstand&lt;/span&gt;&lt;/button&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0; &lt;div id="conclusion-page" class="hidden bg-grime text-bone p-8 rounded-lg shadow-xl border-4 border-punkPurple"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;h2 class="headline text-3xl text-acidYellow mb-4"&gt;Du bist nicht allein. Und nie offline.&lt;/h2&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;p class="mb-2"&gt;Hier findest du digitale Verbündete im Kampf gegen Überwachung.&lt;/p&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;ul class="list-disc ml-6 text-sm mt-3"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;li&gt;&lt;a href="https://www.privacyguides.org/en/" target="_blank" class="underline text-glitchBlue"&gt;privacyguides.org&lt;/a&gt;&lt;/li&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;li&gt;&lt;a href="https://activisthandbook.org/" target="_blank" class="underline text-glitchBlue"&gt;activisthandbook.org&lt;/a&gt;&lt;/li&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;/ul&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0; &lt;/main&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0; &lt;script&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0; const modules = {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; de: [
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; question: `Oh no, du wolltest spontan auf eine Protestaktion am Freitagabend – und hast dein Handy natürlich wieder nicht zuhause gelassen. Welche dieser Sachen könnte am ehesten dazu führen, dass Behörden mitbekommen, dass du dabei warst?`,
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; options: {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; A: `Hab kurz Maps gecheckt, um zum Spot zu kommen – war halt lost.`,
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; B: `Mein Phone hat die ganze Zeit in meiner Tasche gechillt, hab nix gemacht.`,
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; C: `Hab nur ein Pic während der Demo von meinen neuen Sneakern an friends geschickt – sah halt cute aus.`
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; },
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; question: `Du willst deinem Crush schreiben – they_die_der interessiert sich auch für Abolitionismus und Datenschutz. Perfekt, denkst du, denn du wolltest sowieso mehr über AI-Überwachung am Hamburger Hauptbahnhof lernen. Du schlägst ein Rechercheprojekt (und ein Kennenlerntreffen ;)) vor. Aber… keine Antwort – was ist passiert?`,
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; options: {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; A: `Deine Nachricht war verschlüsselt – aber die Metadaten verraten: Du bist schockverliebt. Und online.`,
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; B: `Dein Handy wurde mit Spyware infiziert, bevor du überhaupt "Hi" tippen konntest. Dein Crush ghostet – aus Sicherheitsgründen.`,
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; C: `Die Nachricht wurde automatisch gescannt, markiert, archiviert – und du und dein Flirt sind jetzt Teil einer Fallanalyse.`
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; },
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; question: `Weil dein Crush sich immer noch nicht zum Überwachungsprojekt gemeldet hat, recherchierst du allein im Netz. Am nächsten Tag bekommst du Werbung für:
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				🧠 „Fake-Kamera mit Blinklicht – schreckt Einbrecher ab!“
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				📦 „Anonyme SIM-Karte – keine Registrierung nötig.“
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				💻 „Ihr Gerät ist gefährdet – jetzt sofort mit McAfee Antivirus scannen!“
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				Was steckt dahinter?`,
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; options: {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; A: `Es sind unsichtbare Schnüffler am Werk: Tracker, Cookies und Browser-Fingerprinting.`,
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; B: `Deine Daten landen in riesigen Cloud-Speichern und werden dort analysiert.`,
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; C: `Dein gesamtes Online-Verhalten wird gesammelt und zu einem detaillierten Profil zusammengefügt.`
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; ],
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; en: [
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; { question: 'What gave you away digitally?', options: { A: 'Google Maps 🗺️', B: 'Phone in pocket 📱', C: 'Sneaky sneaker selfie 📸' } },
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; { question: 'Why hasn’t your crush replied?', options: { A: 'Metadata says: obsessed 🧠', B: 'Spyware blocked you 🤖', C: 'AI flagged the flirt 🚨' } },
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; { question: 'Why are you suddenly getting ads for anonymous SIM cards?', options: { A: 'Cookies, baby 🍪', B: 'You’ve been read 📡', C: 'Your data is a tattoo 💀' } }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; ]
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0; };
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0; let currentModule = 0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0; let currentLang = 'de';
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0; let userAnswers = {};
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0; const pages = {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; intro1: document.getElementById('intro-page-1'),
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; intro2: document.getElementById('intro-page-2'),
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; module: document.getElementById('module-container'),
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; download: document.getElementById('download-page'),
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; conclusion: document.getElementById('conclusion-page')
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0; };
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0; function showPage(...ids) {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; Object.entries(pages).forEach(([key, el]) =&gt; {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; el.classList.toggle('hidden', !ids.includes(key));
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; });
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0; function showModule(index) {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; const langModules = modules[currentLang];
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; if (index &gt;= langModules.length) return showDownload();
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; currentModule = index;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; const mod = langModules[index];
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; const wrapper = document.createElement('div');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; wrapper.className = 'bg-grime text-bone rounded-lg p-8 shadow-xl border-4 border-rebelPink max-w-3xl mx-auto whitespace-pre-line';
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; wrapper.innerHTML = `
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;div class="text-center mb-8"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;p class="text-xl font-bold"&gt;${index + 1}. ${mod.question}&lt;/p&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;div class="flex flex-col gap-6 items-center"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; ${Object.entries(mod.options).map(([key, text]) =&gt; `&lt;button class="btn w-full max-w-md text-base bg-punkPurple text-white hover:bg-purple-700" data-option="${key}"&gt;${key}) ${text}&lt;/button&gt;`).join('')}
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; `;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; pages.module.innerHTML = '';
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; pages.module.appendChild(wrapper);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; showPage('module');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; document.querySelectorAll('[data-option]').forEach(btn =&gt; {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; btn.addEventListener('click', e =&gt; {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; const val = e.currentTarget.dataset.option;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; userAnswers[`module${index + 1}`] = val;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; showModule(index + 1);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; });
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; });
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0; function showDownload() {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; document.getElementById('go-to-conclusion-btn').classList.remove('hidden');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; const combo = Object.values(userAnswers).join('');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; const file = `zines/Dein_Zine_${combo}.pdf`;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; const link = document.getElementById('zine-download-link');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; link.href = file;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; link.download = `Dein_Zine_${combo}.pdf`;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; document.getElementById('print-zine-btn').onclick = () =&gt; {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; const win = window.open(file, '_blank');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; if (win) win.onload = () =&gt; win.print();
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; };
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; showPage('download');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0; document.getElementById('start-zine-btn').onclick = () =&gt; showPage('intro2');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0; document.getElementById('next-module-btn-intro').onclick = () =&gt; showModule(0);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0; document.getElementById('go-to-conclusion-btn').onclick = () =&gt; showPage('conclusion');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0; document.getElementById('restart-btn').onclick = () =&gt; {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; if (confirm("Willst du wirklich neu starten?")) {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; userAnswers = {};
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; currentModule = 0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; showPage('intro1');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0; };
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0; document.getElementById('darkmode-toggle').onclick = () =&gt; {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; const html = document.documentElement;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; html.classList.toggle('dark');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; const isDark = html.classList.contains('dark');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; document.getElementById('darkmode-toggle').innerHTML = isDark
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; ? '&lt;i data-lucide="sun"&gt;&lt;/i&gt;'
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; : '&lt;i data-lucide="moon"&gt;&lt;/i&gt;';
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; lucide.createIcons();
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0; };
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0; document.getElementById('lang-toggle').onclick = () =&gt; {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; currentLang = currentLang === 'de' ? 'en' : 'de';
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; userAnswers = {};
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; currentModule = 0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; showPage('intro1');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0; };
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0; showPage('intro1');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;&#xa0;&#xa0; lucide.createIcons();
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0; &lt;/script&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&lt;/body&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&lt;/html&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:10pt">
+				&#xa0;
+			</p>
+	<p style="bottom: 10px; right: 10px; position: absolute;"><a href="https://wordtohtml.net" target="_blank" style="font-size:11px; color: #d0d0d0">Converted to HTML with WordToHTML.net</a></p>
