@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Digital Emergency-Kit</title>
+  <title>Digitales Notfall-Kit</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -46,7 +46,7 @@
 </head>
 <body class="bg-bone text-grime dark:bg-grime dark:text-bone">
   <header class="flex justify-between items-center px-6 py-4 bg-punkPurple text-acidYellow sticky top-0 z-50 shadow-md">
-    <h1 class="text-2xl md:text-3xl headline">👁️ Digital Emergency-Kit</h1>
+    <h1 class="text-2xl md:text-3xl headline">👁️ Digitales Notfall-Kit</h1>
     <div class="flex gap-2">
       <button id="lang-toggle" class="btn bg-acidYellow text-black hover:bg-yellow-300">🌍 EN/DE</button>
       <button id="restart-btn" class="btn bg-acidYellow text-black hover:bg-yellow-300"><i data-lucide="flame"></i> Burn it</button>
@@ -63,7 +63,7 @@
       </p>
       <p class="italic text-sm text-glitchBlue">“Big Brother got a podcast now — and you’re the main topic.”</p>
       <div class="flex flex-col items-center gap-4 mt-8">
-        <button id="start-zine-btn" class="btn px-8 py-4 bg-acidYellow text-black text-lg hover:bg-yellow-300">Ready!</button>
+        <button id="start-zine-btn" class="btn px-8 py-4 bg-acidYellow text-black text-lg hover:bg-yellow-300">Ich bin bereit</button>
       </div>
     </div>
 
@@ -82,28 +82,21 @@
     <div id="module-container" class="hidden"></div>
 
     <div id="download-page" class="hidden bg-grime text-bone p-8 rounded-lg shadow-xl border-4 border-glitchBlue max-w-3xl mx-auto">
-      <h2 class="headline text-3xl mb-4 text-acidYellow">Your Zine is ready. Pure Rebellion.</h2>
-      <p class="mb-4">Print it. Copy it. Hang it on lampposts.Your manifesto against digital fascism.</p>
+      <h2 class="headline text-3xl mb-4 text-acidYellow">Dein Zine ist fertig. Pure Rebellion.</h2>
+      <p class="mb-4">Druck es. Kopier es. Häng es an Laternenpfähle. Dein Manifest gegen digitalen Faschismus.</p>
       <div class="flex flex-row justify-center gap-4">
         <a id="zine-download-link" href="#" download class="btn bg-acidYellow text-black hover:bg-yellow-300 inline-flex items-center gap-2 text-xl"><i data-lucide="download"></i> <span>Download</span></a>
-        <button id="print-zine-btn" class="btn bg-acidYellow text-black hover:bg-yellow-300 inline-flex items-center gap-2 text-xl"><i data-lucide="printer"></i> <span>Print</span></button>
+        <button id="print-zine-btn" class="btn bg-acidYellow text-black hover:bg-yellow-300 inline-flex items-center gap-2 text-xl"><i data-lucide="printer"></i> <span>Drucken</span></button>
       </div>
     </div>
 
-<div class="flex justify-end mt-1 mb-2">
-  <button id="go-to-conclusion-btn" class="btn text-base bg-hawBlue text-white hover:bg-blue-700 hidden inline-flex items-center gap-2">
-    <i data-lucide="search"></i><span>Sources & Resistance</span>
-  </button>
-</div>
-
-
-
-
-    
+    <div class="flex justify-end mt-1 mb-2">
+      <button id="go-to-conclusion-btn" class="btn bg-hawBlue text-white hover:bg-blue-700 hidden inline-flex items-center gap-2"><i data-lucide="search"></i><span>Quellen & Widerstand</span></button>
+    </div>
 
     <div id="conclusion-page" class="hidden bg-grime text-bone p-8 rounded-lg shadow-xl border-4 border-punkPurple">
-      <h2 class="headline text-3xl text-acidYellow mb-4">You are never alone. Never offline.</h2>
-      <p class="mb-2">Here you will find digital allies in the fight against surveillance.</p>
+      <h2 class="headline text-3xl text-acidYellow mb-4">Du bist nicht allein. Und nie offline.</h2>
+      <p class="mb-2">Hier findest du digitale Verbündete im Kampf gegen Überwachung.</p>
       <ul class="list-disc ml-6 text-sm mt-3">
         <li><a href="https://www.privacyguides.org/en/" target="_blank" class="underline text-glitchBlue">privacyguides.org</a></li>
         <li><a href="https://activisthandbook.org/" target="_blank" class="underline text-glitchBlue">activisthandbook.org</a></li>
@@ -115,7 +108,7 @@
     const modules = {
       de: [
         {
-          question: `Oh no, you spontaneously wanted to go to a protest on Friday evening - and of course you didn't leave your cell phone at home again. Which of these things is most likely to lead to the authorities finding out that you were there?,
+          question: `Oh no, du wolltest spontan auf eine Protestaktion am Freitagabend – und hast dein Handy natürlich wieder nicht zuhause gelassen. Welche dieser Sachen könnte am ehesten dazu führen, dass Behörden mitbekommen, dass du dabei warst?`,
           options: {
             A: `Hab kurz Maps gecheckt, um zum Spot zu kommen – war halt lost.`,
             B: `Mein Phone hat die ganze Zeit in meiner Tasche gechillt, hab nix gemacht.`,
