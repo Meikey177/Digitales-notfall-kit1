@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <!-- Custom Font: Resistance -->
   <style>
     @font-face {
@@ -60,47 +59,125 @@
       @apply px-5 py-3 rounded-full text-sm font-bold inline-flex items-center gap-2 border border-black shadow-md hover:scale-105 active:scale-95 transition duration-200 ease-in-out;
     }
   </style>
-
 </head>
+
 <body class="font-body bg-bone text-grime dark:bg-grime dark:text-bone">
+  <!-- Your header, main content, and other sections go here -->
 
-<!-- ... header and main content ... -->
-
-<script>
-  const modules = {
-    en: [
-      {
-        question: 'You hit a protest last Friday — but forgot to leave your phone at home. What’s most likely to snitch on you?',
-        options: {
-          A: 'Just opened Maps real quick — chill, I was lost. 🗺️',
-          B: 'My phone stayed in my pocket the whole time — I swear! 📱',
-          C: 'Only posted my sneakers. They were serving protest chic. 📸'
-        }
-      },
-      {
-        question: 'Your crush is into data privacy and abolition. You suggest a joint project (and maybe a date 👀). But they never text back. Why?',
-        options: {
-          A: 'End-to-end encryption can’t hide your crush. Metadata doesn’t lie. 🧠',
-          B: 'Your phone caught spyware before you could even type “Hi.” Your crush? Ghosted. For national security. 🤖',
-          C: 'Your message got scanned, flagged, archived. Now you and your crush are part of someone’s case study. 🚨'
-        }
-      },
-      {
-        question: `Still ghosted by your crush. So you do your own surveillance research. Now you’re getting hit with:
+  <script>
+    const modules = {
+      en: [
+        {
+          question: 'You hit a protest last Friday — but forgot to leave your phone at home. What’s most likely to snitch on you?',
+          options: {
+            A: 'Just opened Maps real quick — chill, I was lost. 🗺️',
+            B: 'My phone stayed in my pocket the whole time — I swear! 📱',
+            C: 'Only posted my sneakers. They were serving protest chic. 📸'
+          }
+        },
+        {
+          question: 'Your crush is into data privacy and abolition. You suggest a joint project (and maybe a date 👀). But they never text back. Why?',
+          options: {
+            A: 'End-to-end encryption can’t hide your crush. Metadata doesn’t lie. 🧠',
+            B: 'Your phone caught spyware before you could even type “Hi.” Your crush? Ghosted. For national security. 🤖',
+            C: 'Your message got scanned, flagged, archived. Now you and your crush are part of someone’s case study. 🚨'
+          }
+        },
+        {
+          question: `Still ghosted by your crush. So you do your own surveillance research. Now you’re getting hit with:
 🧠 “Fake cameras scare burglars!”
 📦 “Anonymous SIMs — totally not sketchy.”
 💻 “SCAN NOW. Your device is infected.”
 Coincidence? Or cookies?`,
-        options: {
-          A: 'They’re watching — with trackers, cookies, and digital fingerprints you can’t wipe. 🍪',
-          B: 'Everything you do? Shipped to giant cloud servers. Then sliced, diced, and analyzed. 📡',
-          C: 'They watch. They collect. They profile. Now they know you better than you do. 💀'
+          options: {
+            A: 'They’re watching — with trackers, cookies, and digital fingerprints you can’t wipe. 🍪',
+            B: 'Everything you do? Shipped to giant cloud servers. Then sliced, diced, and analyzed. 📡',
+            C: 'They watch. They collect. They profile. Now they know you better than you do. 💀'
+          }
         }
-      }
-    ]
-  };
+      ]
+    };
 
-  // ... rest of script ...
-</script>
+    let currentModule = 0;
+    let currentLang = 'en';
+    let userAnswers = {};
+    const pages = {
+      intro1: document.getElementById('intro-page-1'),
+      intro2: document.getElementById('intro-page-2'),
+      module: document.getElementById('module-container'),
+      download: document.getElementById('download-page'),
+      conclusion: document.getElementById('conclusion-page')
+    };
+
+    function showPage(...ids) {
+      Object.entries(pages).forEach(([key, el]) => {
+        el.classList.toggle('hidden', !ids.includes(key));
+      });
+    }
+
+    function showModule(index) {
+      const langModules = modules[currentLang];
+      if (index >= langModules.length) return showDownload();
+      currentModule = index;
+      const mod = langModules[index];
+      const wrapper = document.createElement('div');
+      wrapper.className = 'bg-grime text-bone rounded-lg p-8 shadow-xl border-4 border-rebelPink max-w-3xl mx-auto whitespace-pre-line';
+      wrapper.innerHTML = `
+        <div class="text-center mb-8">
+          <p class="text-xl font-bold">${index + 1}. ${mod.question}</p>
+        </div>
+        <div class="flex flex-col gap-6 items-center">
+          ${Object.entries(mod.options).map(([key, text]) => `<button class="btn w-full max-w-md text-base bg-punkPurple text-white hover:bg-purple-700" data-option="${key}">${key}) ${text}</button>`).join('')}
+        </div>
+      `;
+      pages.module.innerHTML = '';
+      pages.module.appendChild(wrapper);
+      showPage('module');
+      document.querySelectorAll('[data-option]').forEach(btn => {
+        btn.addEventListener('click', e => {
+          const val = e.currentTarget.dataset.option;
+          userAnswers[`module${index + 1}`] = val;
+          showModule(index + 1);
+        });
+      });
+    }
+
+    function showDownload() {
+      document.getElementById('go-to-conclusion-btn').classList.remove('hidden');
+      const combo = Object.values(userAnswers).join('');
+      const file = `Zines/Dein_Zine_${combo}.pdf`;
+      const link = document.getElementById('zine-download-link');
+      link.href = file;
+      link.download = `Your_Zine_${combo}.pdf`;
+      document.getElementById('print-zine-btn').onclick = () => {
+        const win = window.open(file, '_blank');
+        if (win) win.onload = () => win.print();
+      };
+      showPage('download');
+    }
+
+    document.getElementById('start-zine-btn').onclick = () => showPage('intro2');
+    document.getElementById('next-module-btn-intro').onclick = () => showModule(0);
+    document.getElementById('go-to-conclusion-btn').onclick = () => showPage('conclusion');
+    document.getElementById('restart-btn').onclick = () => {
+      if (confirm("Are you sure you want to restart?")) {
+        userAnswers = {};
+        currentModule = 0;
+        showPage('intro1');
+      }
+    };
+    document.getElementById('darkmode-toggle').onclick = () => {
+      const html = document.documentElement;
+      html.classList.toggle('dark');
+      const isDark = html.classList.contains('dark');
+      document.getElementById('darkmode-toggle').innerHTML = isDark
+        ? '<i data-lucide="sun"></i>'
+        : '<i data-lucide="moon"></i>';
+      lucide.createIcons();
+    };
+
+    showPage('intro1');
+    lucide.createIcons();
+  </script>
 </body>
 </html>
