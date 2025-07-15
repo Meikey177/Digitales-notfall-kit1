@@ -186,7 +186,7 @@
     function showDownload() {
       document.getElementById('go-to-conclusion-btn').classList.remove('hidden');
       const combo = Object.values(userAnswers).join('');
-      const file = `zines/Dein_Zine_${combo}.pdf`;
+      const file = `Zines/Dein_Zine_${combo}.pdf`;
       const link = document.getElementById('zine-download-link');
       link.href = file;
       link.download = `Dein_Zine_${combo}.pdf`;
