@@ -90,44 +90,18 @@
       </div>
     </div>
 
-    <div class="flex flex-col items-end mt-1 mb-4 space-y-2">
-  <button id="go-to-conclusion-btn" class="btn bg-hawBlue text-white hover:bg-blue-700 hidden inline-flex items-center gap-2">
-    <i data-lucide="search"></i><span>Quellen & Widerstand</span>
-  </button>
-  <a
-    href="https://www.instagram.com/eymeikey/?hl=en"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="flex items-center gap-1 text-sm underline hover:text-glitchBlue hidden"
-    id="eymeikey-link"
-  >
-    <i data-lucide="instagram" class="w-4 h-4"></i>
-    Project by @eymeikey
-  </a>
-</div>
-   <div id="conclusion-page" class="hidden bg-grime text-bone p-8 rounded-lg shadow-xl border-4 border-punkPurple">
-  <h2 class="headline text-3xl text-acidYellow mb-4">Du bist nicht allein. Und nie offline.</h2>
-  <p class="mb-2">Hier findest du digitale Verbündete im Kampf gegen Überwachung.</p>
-  <ul class="list-disc ml-6 text-sm mt-3 mb-6">
-    <li><a href="https://www.privacyguides.org/en/" target="_blank" class="underline text-glitchBlue">privacyguides.org</a></li>
-    <li><a href="https://activisthandbook.org/" target="_blank" class="underline text-glitchBlue">activisthandbook.org</a></li>
-  </ul>
-  <div class="flex justify-end mt-4">
-    <a
-      href="https://www.instagram.com/eymeikey/?hl=en"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="flex items-center gap-1 text-sm underline hover:text-glitchBlue"
-    >
-      <i data-lucide="instagram" class="w-4 h-4"></i>
-      Project by @eymeikey
-    </a>
-  </div>
-</div>
+    <div class="flex justify-end mt-1 mb-2">
+      <button id="go-to-conclusion-btn" class="btn bg-hawBlue text-white hover:bg-blue-700 hidden inline-flex items-center gap-2"><i data-lucide="search"></i><span>Quellen & Widerstand</span></button>
+    </div>
 
-
-
-    
+    <div id="conclusion-page" class="hidden bg-grime text-bone p-8 rounded-lg shadow-xl border-4 border-punkPurple">
+      <h2 class="headline text-3xl text-acidYellow mb-4">Du bist nicht allein. Und nie offline.</h2>
+      <p class="mb-2">Hier findest du digitale Verbündete im Kampf gegen Überwachung.</p>
+      <ul class="list-disc ml-6 text-sm mt-3">
+        <li><a href="https://www.privacyguides.org/en/" target="_blank" class="underline text-glitchBlue">privacyguides.org</a></li>
+        <li><a href="https://activisthandbook.org/" target="_blank" class="underline text-glitchBlue">activisthandbook.org</a></li>
+      </ul>
+    </div>
   </main>
 
   <script>
@@ -225,11 +199,7 @@
 
     document.getElementById('start-zine-btn').onclick = () => showPage('intro2');
     document.getElementById('next-module-btn-intro').onclick = () => showModule(0);
-
-    document.getElementById('go-to-conclusion-btn').onclick = () => {
-    showPage('conclusion');
-    lucide.createIcons();  
-};    
+    document.getElementById('go-to-conclusion-btn').onclick = () => showPage('conclusion');
     document.getElementById('restart-btn').onclick = () => {
       if (confirm("Willst du wirklich neu starten?")) {
         userAnswers = {};
