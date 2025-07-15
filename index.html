@@ -214,7 +214,11 @@
 
     document.getElementById('start-zine-btn').onclick = () => showPage('intro2');
     document.getElementById('next-module-btn-intro').onclick = () => showModule(0);
-    document.getElementById('go-to-conclusion-btn').onclick = () => showPage('conclusion');
+
+    document.getElementById('go-to-conclusion-btn').onclick = () => {
+    showPage('conclusion');
+    lucide.createIcons();  
+};    
     document.getElementById('restart-btn').onclick = () => {
       if (confirm("Willst du wirklich neu starten?")) {
         userAnswers = {};
