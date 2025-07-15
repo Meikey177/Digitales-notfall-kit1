@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -103,10 +105,26 @@
     <div id="download-page" class="hidden bg-grime text-bone p-8 rounded-lg shadow-xl border-4 border-glitchBlue max-w-3xl mx-auto">
       <h2 class="font-headline text-3xl mb-4 text-acidYellow">Your zine is ready. Pure rebellion.</h2>
       <p class="mb-4">Print it. Copy it. Tape it to lamp posts. Your manifesto against digital fascism.</p>
+
       <div class="flex flex-row justify-center gap-4">
-        <a id="zine-download-link" href="#" download class="btn bg-acidYellow text-black hover:bg-yellow-300 inline-flex items-center gap-2 text-xl"><i data-lucide="download"></i> <span>Download</span></a>
-        <button id="print-zine-btn" class="btn bg-acidYellow text-black hover:bg-yellow-300 inline-flex items-center gap-2 text-xl"><i data-lucide="printer"></i> <span>Print</span></button>
+        <a id="zine-download-link" href="#" download class="btn bg-acidYellow text-black hover:bg-yellow-300 inline-flex items-center gap-2 text-xl">
+          <i data-lucide="download"></i> <span>Download</span>
+        </a>
+        <button id="print-zine-btn" class="btn bg-acidYellow text-black hover:bg-yellow-300 inline-flex items-center gap-2 text-xl">
+          <i data-lucide="printer"></i> <span>Print</span>
+        </button>
       </div>
+    </div>
+
+    <!-- ✅ Instagram Credit BELOW the download box -->
+    <div class="mt-12 flex justify-start items-center text-lg text-punkPurple">
+      <span class="mr-2">Project by</span>
+      <a href="https://www.instagram.com/eymeikey/?hl=en" target="_blank" class="flex flex-col items-center group">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 group-hover:opacity-80 transition" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm5.25-.88a.88.88 0 1 1 0 1.76.88.88 0 0 1 0-1.76z"/>
+        </svg>
+        <span class="text-base">@eymeikey</span>
+      </a>
     </div>
 
     <div class="flex justify-end mt-1 mb-2">
@@ -127,13 +145,9 @@
   <script>
     const modules = {
       en: [
-        { question: '“You hit a protest last Friday — but forgot to leave your phone at home. What’s most likely to snitch on you?”', options: { A: 'I asked Google for directions... and now the cops know too. 🗺️', B: 'My phone stayed in my pocket the whole time — I swear!📱', C: 'Only posted my sneakers. They were serving protest chic.📸' } },
-        { question: 'Your crush is into data privacy and abolition. You suggest a joint project (and maybe a date 👀). But they never text back. Why?', options: { A: 'Metadata says: obsessed 🧠', B: 'Spyware blocked you 🤖', C: 'AI flagged the flirt 🚨' } },
-        { question: 'Your crush never wrote back about the surveillance collab. So you do some late-night digging. The next day, your feed hits you with:
-🧠 “Fake security cam — scare off intruders!”
-📦 “Anonymous SIM. No ID needed.”
-💻 “Your device is at risk — scan with McAfee NOW!”
-What tipped them off?', options: { A: 'Cookies, baby 🍪', B: 'You’ve been read 📡', C: 'Your data is a tattoo 💀' } }
+        { question: 'What gave you away digitally?', options: { A: 'Google Maps 🗺️', B: 'Phone in pocket 📱', C: 'Sneaky sneaker selfie 📸' } },
+        { question: 'Why hasn’t your crush replied?', options: { A: 'Metadata says: obsessed 🧠', B: 'Spyware blocked you 🤖', C: 'AI flagged the flirt 🚨' } },
+        { question: 'Why are you suddenly getting ads for anonymous SIM cards?', options: { A: 'Cookies, baby 🍪', B: 'You’ve been read 📡', C: 'Your data is a tattoo 💀' } }
       ]
     };
 
