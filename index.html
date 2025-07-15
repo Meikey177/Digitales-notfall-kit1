@@ -1,9 +1,9 @@
  <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Digitales Notfall-Kit</title>
+  <title>Digital First Aid Kit</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -46,9 +46,8 @@
 </head>
 <body class="bg-bone text-grime dark:bg-grime dark:text-bone">
   <header class="flex justify-between items-center px-6 py-4 bg-punkPurple text-acidYellow sticky top-0 z-50 shadow-md">
-    <h1 class="text-2xl md:text-3xl headline">👁️ Digitales Notfall-Kit</h1>
+    <h1 class="text-2xl md:text-3xl headline">👁️ Digital First Aid Kit</h1>
     <div class="flex gap-2">
-      <button id="lang-toggle" class="btn bg-acidYellow text-black hover:bg-yellow-300">🌍 EN/DE</button>
       <button id="restart-btn" class="btn bg-acidYellow text-black hover:bg-yellow-300"><i data-lucide="flame"></i> Burn it</button>
       <button id="darkmode-toggle" class="btn bg-acidYellow text-black hover:bg-yellow-300"><i data-lucide="moon"></i></button>
     </div>
@@ -63,7 +62,7 @@
       </p>
       <p class="italic text-sm text-glitchBlue">“Big Brother got a podcast now — and you’re the main topic.”</p>
       <div class="flex flex-col items-center gap-4 mt-8">
-        <button id="start-zine-btn" class="btn px-8 py-4 bg-acidYellow text-black text-lg hover:bg-yellow-300">Ich bin bereit</button>
+        <button id="start-zine-btn" class="btn px-8 py-4 bg-acidYellow text-black text-lg hover:bg-yellow-300">I’m ready</button>
       </div>
     </div>
 
@@ -82,21 +81,21 @@
     <div id="module-container" class="hidden"></div>
 
     <div id="download-page" class="hidden bg-grime text-bone p-8 rounded-lg shadow-xl border-4 border-glitchBlue max-w-3xl mx-auto">
-      <h2 class="headline text-3xl mb-4 text-acidYellow">Dein Zine ist fertig. Pure Rebellion.</h2>
-      <p class="mb-4">Druck es. Kopier es. Häng es an Laternenpfähle. Dein Manifest gegen digitalen Faschismus.</p>
+      <h2 class="headline text-3xl mb-4 text-acidYellow">Your zine is ready. Pure rebellion.</h2>
+      <p class="mb-4">Print it. Copy it. Tape it to lamp posts. Your manifesto against digital fascism.</p>
       <div class="flex flex-row justify-center gap-4">
         <a id="zine-download-link" href="#" download class="btn bg-acidYellow text-black hover:bg-yellow-300 inline-flex items-center gap-2 text-xl"><i data-lucide="download"></i> <span>Download</span></a>
-        <button id="print-zine-btn" class="btn bg-acidYellow text-black hover:bg-yellow-300 inline-flex items-center gap-2 text-xl"><i data-lucide="printer"></i> <span>Drucken</span></button>
+        <button id="print-zine-btn" class="btn bg-acidYellow text-black hover:bg-yellow-300 inline-flex items-center gap-2 text-xl"><i data-lucide="printer"></i> <span>Print</span></button>
       </div>
     </div>
 
     <div class="flex justify-end mt-1 mb-2">
-      <button id="go-to-conclusion-btn" class="btn bg-hawBlue text-white hover:bg-blue-700 hidden inline-flex items-center gap-2"><i data-lucide="search"></i><span>Quellen & Widerstand</span></button>
+      <button id="go-to-conclusion-btn" class="btn bg-hawBlue text-white hover:bg-blue-700 hidden inline-flex items-center gap-2"><i data-lucide="search"></i><span>Sources & Resistance</span></button>
     </div>
 
     <div id="conclusion-page" class="hidden bg-grime text-bone p-8 rounded-lg shadow-xl border-4 border-punkPurple">
-      <h2 class="headline text-3xl text-acidYellow mb-4">Du bist nicht allein. Und nie offline.</h2>
-      <p class="mb-2">Hier findest du digitale Verbündete im Kampf gegen Überwachung.</p>
+      <h2 class="headline text-3xl text-acidYellow mb-4">You’re not alone. And never offline.</h2>
+      <p class="mb-2">Here you’ll find digital allies in the fight against surveillance.</p>
       <ul class="list-disc ml-6 text-sm mt-3">
         <li><a href="https://www.privacyguides.org/en/" target="_blank" class="underline text-glitchBlue">privacyguides.org</a></li>
         <li><a href="https://activisthandbook.org/" target="_blank" class="underline text-glitchBlue">activisthandbook.org</a></li>
@@ -106,32 +105,6 @@
 
   <script>
     const modules = {
-      de: [
-        {
-          question: `Oh no, du wolltest spontan auf eine Protestaktion am Freitagabend – und hast dein Handy natürlich wieder nicht zuhause gelassen. Welche dieser Sachen könnte am ehesten dazu führen, dass Behörden mitbekommen, dass du dabei warst?`,
-          options: {
-            A: `Hab kurz Maps gecheckt, um zum Spot zu kommen – war halt lost.`,
-            B: `Mein Phone hat die ganze Zeit in meiner Tasche gechillt, hab nix gemacht.`,
-            C: `Hab nur ein Pic während der Demo von meinen neuen Sneakern an friends geschickt – sah halt cute aus.`
-          }
-        },
-        {
-          question: `Du willst deinem Crush schreiben – they_die_der interessiert sich auch für Abolitionismus und Datenschutz. Perfekt, denkst du, denn du wolltest sowieso mehr über AI-Überwachung am Hamburger Hauptbahnhof lernen. Du schlägst ein Rechercheprojekt (und ein Kennenlerntreffen ;)) vor. Aber… keine Antwort – was ist passiert?`,
-          options: {
-            A: `Deine Nachricht war verschlüsselt – aber die Metadaten verraten: Du bist schockverliebt. Und online.`,
-            B: `Dein Handy wurde mit Spyware infiziert, bevor du überhaupt "Hi" tippen konntest. Dein Crush ghostet – aus Sicherheitsgründen.`,
-            C: `Die Nachricht wurde automatisch gescannt, markiert, archiviert – und du und dein Flirt sind jetzt Teil einer Fallanalyse.`
-          }
-        },
-        {
-          question: `Weil dein Crush sich immer noch nicht zum Überwachungsprojekt gemeldet hat, recherchierst du allein im Netz. Am nächsten Tag bekommst du Werbung für:\n🧠 „Fake-Kamera mit Blinklicht – schreckt Einbrecher ab!“\n📦 „Anonyme SIM-Karte – keine Registrierung nötig.“\n💻 „Ihr Gerät ist gefährdet – jetzt sofort mit McAfee Antivirus scannen!“\nWas steckt dahinter?`,
-          options: {
-            A: `Es sind unsichtbare Schnüffler am Werk: Tracker, Cookies und Browser-Fingerprinting.`,
-            B: `Deine Daten landen in riesigen Cloud-Speichern und werden dort analysiert.`,
-            C: `Dein gesamtes Online-Verhalten wird gesammelt und zu einem detaillierten Profil zusammengefügt.`
-          }
-        }
-      ],
       en: [
         { question: 'What gave you away digitally?', options: { A: 'Google Maps 🗺️', B: 'Phone in pocket 📱', C: 'Sneaky sneaker selfie 📸' } },
         { question: 'Why hasn’t your crush replied?', options: { A: 'Metadata says: obsessed 🧠', B: 'Spyware blocked you 🤖', C: 'AI flagged the flirt 🚨' } },
@@ -140,7 +113,7 @@
     };
 
     let currentModule = 0;
-    let currentLang = 'de';
+    let currentLang = 'en';
     let userAnswers = {};
     const pages = {
       intro1: document.getElementById('intro-page-1'),
@@ -189,7 +162,7 @@
       const file = `Zines/Dein_Zine_${combo}.pdf`;
       const link = document.getElementById('zine-download-link');
       link.href = file;
-      link.download = `Dein_Zine_${combo}.pdf`;
+      link.download = `Your_Zine_${combo}.pdf`;
       document.getElementById('print-zine-btn').onclick = () => {
         const win = window.open(file, '_blank');
         if (win) win.onload = () => win.print();
@@ -201,7 +174,7 @@
     document.getElementById('next-module-btn-intro').onclick = () => showModule(0);
     document.getElementById('go-to-conclusion-btn').onclick = () => showPage('conclusion');
     document.getElementById('restart-btn').onclick = () => {
-      if (confirm("Willst du wirklich neu starten?")) {
+      if (confirm("Are you sure you want to restart?")) {
         userAnswers = {};
         currentModule = 0;
         showPage('intro1');
@@ -215,12 +188,6 @@
         ? '<i data-lucide="sun"></i>'
         : '<i data-lucide="moon"></i>';
       lucide.createIcons();
-    };
-    document.getElementById('lang-toggle').onclick = () => {
-      currentLang = currentLang === 'de' ? 'en' : 'de';
-      userAnswers = {};
-      currentModule = 0;
-      showPage('intro1');
     };
 
     showPage('intro1');
