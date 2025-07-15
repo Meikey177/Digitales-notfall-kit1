@@ -21,7 +21,7 @@
             bone: '#fefcfb'
           },
           fontFamily: {
-            headline: ['"Resistance"', 'cursive'],
+            headline: ['"Rock Salt"', 'cursive'],
             body: ['"Courier Prime"', 'monospace']
           }
         }
@@ -29,25 +29,16 @@
     };
   </script>
   <script src="https://unpkg.com/lucide@latest"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Rock+Salt&display=swap" rel="stylesheet" />
   <style>
-    @font-face {
-      font-family: 'Resistance';
-      src: url('fonts/Resistance-generale.otf') format('opentype');
-      font-weight: normal;
-      font-style: normal;
-    }
-
     body {
       font-family: 'Courier Prime', monospace;
       background-image: url('https://www.transparenttextures.com/patterns/cardboard-flat.png');
       background-repeat: repeat;
     }
-
     .headline {
-      font-family: 'Resistance', cursive;
+      font-family: 'Rock Salt', cursive;
     }
-
     .btn {
       @apply px-5 py-3 rounded-full text-sm font-bold inline-flex items-center gap-2 border border-black shadow-md hover:scale-105 active:scale-95 transition duration-200 ease-in-out;
     }
@@ -111,5 +102,96 @@
       </ul>
     </div>
   </main>
+
+  <script>
+    const modules = {
+      en: [
+        { question: 'What gave you away digitally?', options: { A: 'Google Maps 🗺️', B: 'Phone in pocket 📱', C: 'Sneaky sneaker selfie 📸' } },
+        { question: 'Why hasn’t your crush replied?', options: { A: 'Metadata says: obsessed 🧠', B: 'Spyware blocked you 🤖', C: 'AI flagged the flirt 🚨' } },
+        { question: 'Why are you suddenly getting ads for anonymous SIM cards?', options: { A: 'Cookies, baby 🍪', B: 'You’ve been read 📡', C: 'Your data is a tattoo 💀' } }
+      ]
+    };
+
+    let currentModule = 0;
+    let currentLang = 'en';
+    let userAnswers = {};
+    const pages = {
+      intro1: document.getElementById('intro-page-1'),
+      intro2: document.getElementById('intro-page-2'),
+      module: document.getElementById('module-container'),
+      download: document.getElementById('download-page'),
+      conclusion: document.getElementById('conclusion-page')
+    };
+
+    function showPage(...ids) {
+      Object.entries(pages).forEach(([key, el]) => {
+        el.classList.toggle('hidden', !ids.includes(key));
+      });
+    }
+
+    function showModule(index) {
+      const langModules = modules[currentLang];
+      if (index >= langModules.length) return showDownload();
+      currentModule = index;
+      const mod = langModules[index];
+      const wrapper = document.createElement('div');
+      wrapper.className = 'bg-grime text-bone rounded-lg p-8 shadow-xl border-4 border-rebelPink max-w-3xl mx-auto whitespace-pre-line';
+      wrapper.innerHTML = `
+        <div class="text-center mb-8">
+          <p class="text-xl font-bold">${index + 1}. ${mod.question}</p>
+        </div>
+        <div class="flex flex-col gap-6 items-center">
+          ${Object.entries(mod.options).map(([key, text]) => `<button class="btn w-full max-w-md text-base bg-punkPurple text-white hover:bg-purple-700" data-option="${key}">${key}) ${text}</button>`).join('')}
+        </div>
+      `;
+      pages.module.innerHTML = '';
+      pages.module.appendChild(wrapper);
+      showPage('module');
+      document.querySelectorAll('[data-option]').forEach(btn => {
+        btn.addEventListener('click', e => {
+          const val = e.currentTarget.dataset.option;
+          userAnswers[`module${index + 1}`] = val;
+          showModule(index + 1);
+        });
+      });
+    }
+
+    function showDownload() {
+      document.getElementById('go-to-conclusion-btn').classList.remove('hidden');
+      const combo = Object.values(userAnswers).join('');
+      const file = `Zines/Dein_Zine_${combo}.pdf`;
+      const link = document.getElementById('zine-download-link');
+      link.href = file;
+      link.download = `Your_Zine_${combo}.pdf`;
+      document.getElementById('print-zine-btn').onclick = () => {
+        const win = window.open(file, '_blank');
+        if (win) win.onload = () => win.print();
+      };
+      showPage('download');
+    }
+
+    document.getElementById('start-zine-btn').onclick = () => showPage('intro2');
+    document.getElementById('next-module-btn-intro').onclick = () => showModule(0);
+    document.getElementById('go-to-conclusion-btn').onclick = () => showPage('conclusion');
+    document.getElementById('restart-btn').onclick = () => {
+      if (confirm("Are you sure you want to restart?")) {
+        userAnswers = {};
+        currentModule = 0;
+        showPage('intro1');
+      }
+    };
+    document.getElementById('darkmode-toggle').onclick = () => {
+      const html = document.documentElement;
+      html.classList.toggle('dark');
+      const isDark = html.classList.contains('dark');
+      document.getElementById('darkmode-toggle').innerHTML = isDark
+        ? '<i data-lucide="sun"></i>'
+        : '<i data-lucide="moon"></i>';
+      lucide.createIcons();
+    };
+
+    showPage('intro1');
+    lucide.createIcons();
+  </script>
 </body>
 </html>
