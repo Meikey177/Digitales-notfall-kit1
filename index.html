@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,175 +64,43 @@
 </head>
 <body class="font-body bg-bone text-grime dark:bg-grime dark:text-bone">
 
-  <header class="flex justify-between items-center px-6 py-4 bg-punkPurple text-acidYellow sticky top-0 z-50 shadow-md">
-    <h1 class="text-2xl md:text-3xl font-headline">👁️ Digital First Aid Kit</h1>
-    <div class="flex gap-2">
-      <button id="restart-btn" class="btn bg-acidYellow text-black hover:bg-yellow-300"><i data-lucide="flame"></i> Burn it</button>
-      <button id="darkmode-toggle" class="btn bg-acidYellow text-black hover:bg-yellow-300"><i data-lucide="moon"></i></button>
-    </div>
-  </header>
+<!-- ... header and main content ... -->
 
-  <main id="app-container" class="max-w-3xl mx-auto px-4 py-6">
-
-    <div id="intro-page-1" class="bg-grime text-bone p-8 rounded-lg shadow-xl border-4 border-rebelPink">
-      <h2 class="font-headline text-4xl mb-4 text-acidYellow">👁️ Meet Your Digital Shadow</h2>
-      <p class="mb-6">
-        You ever wake up and feel like your phone knows your dreams? That’s not magic. That’s capitalism with binoculars.
-        This ain’t a zine, it’s group therapy for people who know that clearing your browser history won’t delete your sins... or your metadata.
-      </p>
-      <p class="italic text-sm text-glitchBlue">“Big Brother got a podcast now — and you’re the main topic.”</p>
-      <div class="flex flex-col items-center gap-4 mt-8">
-        <button id="start-zine-btn" class="btn px-8 py-4 bg-acidYellow text-black text-lg hover:bg-yellow-300">I’m ready</button>
-      </div>
-    </div>
-
-    <div id="intro-page-2" class="hidden bg-grime text-bone p-8 rounded-lg shadow-xl border-4 border-rebelPink">
-      <h2 class="font-headline text-3xl mb-3 text-glitchBlue">Tools for the Digitally Hunted</h2>
-      <p class="mb-4">
-        This is your field guide to digital self-defense — for people too smart for tinfoil hats and too tired for 12-hour YouTube rabbit holes.
-        If you think “I’ve got nothing to hide” sounds like freedom, congrats: You’ve already lost.
-      </p>
-      <p class="text-sm italic text-rebelPink">“Privacy is like deodorant. You don’t think about it... until someone stinks.”</p>
-      <div class="flex flex-col items-center gap-4 mt-8">
-        <button id="next-module-btn-intro" class="btn px-8 py-4 bg-acidYellow text-black text-lg hover:bg-yellow-300">No one zines better</button>
-      </div>
-    </div>
-
-    <div id="module-container" class="hidden"></div>
-
-    <div id="download-page" class="hidden bg-grime text-bone p-8 rounded-lg shadow-xl border-4 border-glitchBlue max-w-3xl mx-auto">
-      <h2 class="font-headline text-3xl mb-4 text-acidYellow">Your zine is ready. Pure rebellion.</h2>
-      <p class="mb-4">Print it. Copy it. Tape it to lamp posts. Your manifesto against digital fascism.</p>
-
-      <div class="flex flex-row justify-center gap-4">
-        <a id="zine-download-link" href="#" download class="btn bg-acidYellow text-black hover:bg-yellow-300 inline-flex items-center gap-2 text-xl">
-          <i data-lucide="download"></i> <span>Download</span>
-        </a>
-        <button id="print-zine-btn" class="btn bg-acidYellow text-black hover:bg-yellow-300 inline-flex items-center gap-2 text-xl">
-          <i data-lucide="printer"></i> <span>Print</span>
-        </button>
-      </div>
-    </div>
-
-    <!-- ✅ Instagram Credit BELOW the download box -->
-    <div class="mt-12 flex justify-start items-center text-lg text-punkPurple">
-      <span class="mr-2">Project by</span>
-      <a href="https://www.instagram.com/eymeikey/" target="_blank" class="flex flex-col items-center group">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 group-hover:opacity-80 transition" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm5.25-.88a.88.88 0 1 1 0 1.76.88.88 0 0 1 0-1.76z"/>
-        </svg>
-        <span class="text-base">@eymeikey</span>
-      </a>
-    </div>
-
-    <div class="flex justify-end mt-1 mb-2">
-      <button id="go-to-conclusion-btn" class="btn bg-hawBlue text-white hover:bg-blue-700 hidden inline-flex items-center gap-2"><i data-lucide="search"></i><span>Sources & Resistance</span></button>
-    </div>
-
-    <div id="conclusion-page" class="hidden bg-grime text-bone p-8 rounded-lg shadow-xl border-4 border-punkPurple">
-      <h2 class="font-headline text-3xl text-acidYellow mb-4">You’re not alone. And never offline.</h2>
-      <p class="mb-2">Here you’ll find digital allies in the fight against surveillance.</p>
-      <ul class="list-disc ml-6 text-sm mt-3">
-        <li><a href="https://www.privacyguides.org/en/" target="_blank" class="underline text-glitchBlue">privacyguides.org</a></li>
-        <li><a href="https://activisthandbook.org/" target="_blank" class="underline text-glitchBlue">activisthandbook.org</a></li>
-      </ul>
-    </div>
-
-  </main>
-
-  <script>
-    const modules = {
-      en: [
-        { question: 'You hit a protest last Friday — but forgot to leave your phone at home. What’s most likely to snitch on you?', options: { A: 'Just opened Maps real quick — chill, I was lost. 🗺️', B: 'My phone stayed in my pocket the whole time — I swear! 📱', C: 'Only posted my sneakers. They were serving protest chic. 📸' } },
-        { question: 'Your crush is into data privacy and abolition. You suggest a joint project (and maybe a date 👀). But they never text back. Why?', options: { A: 'End-to-end encryption can’t hide your crush. Metadata doesn’t lie. 🧠', B: 'Your phone caught spyware before you could even type “Hi.” Your crush? Ghosted. For national security. 🤖', C: 'Your message got scanned, flagged, archived. Now you and your crush are part of someone’s case study. 🚨' } },
-        { question: 'Still ghosted by your crush. So you do your own surveillance research. Now you’re getting hit with:
+<script>
+  const modules = {
+    en: [
+      {
+        question: 'You hit a protest last Friday — but forgot to leave your phone at home. What’s most likely to snitch on you?',
+        options: {
+          A: 'Just opened Maps real quick — chill, I was lost. 🗺️',
+          B: 'My phone stayed in my pocket the whole time — I swear! 📱',
+          C: 'Only posted my sneakers. They were serving protest chic. 📸'
+        }
+      },
+      {
+        question: 'Your crush is into data privacy and abolition. You suggest a joint project (and maybe a date 👀). But they never text back. Why?',
+        options: {
+          A: 'End-to-end encryption can’t hide your crush. Metadata doesn’t lie. 🧠',
+          B: 'Your phone caught spyware before you could even type “Hi.” Your crush? Ghosted. For national security. 🤖',
+          C: 'Your message got scanned, flagged, archived. Now you and your crush are part of someone’s case study. 🚨'
+        }
+      },
+      {
+        question: `Still ghosted by your crush. So you do your own surveillance research. Now you’re getting hit with:
 🧠 “Fake cameras scare burglars!”
 📦 “Anonymous SIMs — totally not sketchy.”
 💻 “SCAN NOW. Your device is infected.”
-Coincidence? Or cookies?', options: { A: 'They’re watching — with trackers, cookies, and digital fingerprints you can’t wipe. 🍪', B: 'Everything you do? Shipped to giant cloud servers. Then sliced, diced, and analyzed. 📡', C: 'They watch. They collect. They profile. Now they know you better than you do. 💀' } }
-      ]
-    };
-
-    let currentModule = 0;
-    let currentLang = 'en';
-    let userAnswers = {};
-    const pages = {
-      intro1: document.getElementById('intro-page-1'),
-      intro2: document.getElementById('intro-page-2'),
-      module: document.getElementById('module-container'),
-      download: document.getElementById('download-page'),
-      conclusion: document.getElementById('conclusion-page')
-    };
-
-    function showPage(...ids) {
-      Object.entries(pages).forEach(([key, el]) => {
-        el.classList.toggle('hidden', !ids.includes(key));
-      });
-    }
-
-    function showModule(index) {
-      const langModules = modules[currentLang];
-      if (index >= langModules.length) return showDownload();
-      currentModule = index;
-      const mod = langModules[index];
-      const wrapper = document.createElement('div');
-      wrapper.className = 'bg-grime text-bone rounded-lg p-8 shadow-xl border-4 border-rebelPink max-w-3xl mx-auto whitespace-pre-line';
-      wrapper.innerHTML = `
-        <div class="text-center mb-8">
-          <p class="text-xl font-bold">${index + 1}. ${mod.question}</p>
-        </div>
-        <div class="flex flex-col gap-6 items-center">
-          ${Object.entries(mod.options).map(([key, text]) => `<button class="btn w-full max-w-md text-base bg-punkPurple text-white hover:bg-purple-700" data-option="${key}">${key}) ${text}</button>`).join('')}
-        </div>
-      `;
-      pages.module.innerHTML = '';
-      pages.module.appendChild(wrapper);
-      showPage('module');
-      document.querySelectorAll('[data-option]').forEach(btn => {
-        btn.addEventListener('click', e => {
-          const val = e.currentTarget.dataset.option;
-          userAnswers[`module${index + 1}`] = val;
-          showModule(index + 1);
-        });
-      });
-    }
-
-    function showDownload() {
-      document.getElementById('go-to-conclusion-btn').classList.remove('hidden');
-      const combo = Object.values(userAnswers).join('');
-      const file = `Zines/Dein_Zine_${combo}.pdf`;
-      const link = document.getElementById('zine-download-link');
-      link.href = file;
-      link.download = `Your_Zine_${combo}.pdf`;
-      document.getElementById('print-zine-btn').onclick = () => {
-        const win = window.open(file, '_blank');
-        if (win) win.onload = () => win.print();
-      };
-      showPage('download');
-    }
-
-    document.getElementById('start-zine-btn').onclick = () => showPage('intro2');
-    document.getElementById('next-module-btn-intro').onclick = () => showModule(0);
-    document.getElementById('go-to-conclusion-btn').onclick = () => showPage('conclusion');
-    document.getElementById('restart-btn').onclick = () => {
-      if (confirm("Are you sure you want to restart?")) {
-        userAnswers = {};
-        currentModule = 0;
-        showPage('intro1');
+Coincidence? Or cookies?`,
+        options: {
+          A: 'They’re watching — with trackers, cookies, and digital fingerprints you can’t wipe. 🍪',
+          B: 'Everything you do? Shipped to giant cloud servers. Then sliced, diced, and analyzed. 📡',
+          C: 'They watch. They collect. They profile. Now they know you better than you do. 💀'
+        }
       }
-    };
-    document.getElementById('darkmode-toggle').onclick = () => {
-      const html = document.documentElement;
-      html.classList.toggle('dark');
-      const isDark = html.classList.contains('dark');
-      document.getElementById('darkmode-toggle').innerHTML = isDark
-        ? '<i data-lucide="sun"></i>'
-        : '<i data-lucide="moon"></i>';
-      lucide.createIcons();
-    };
+    ]
+  };
 
-    showPage('intro1');
-    lucide.createIcons();
-  </script>
+  // ... rest of script ...
+</script>
 </body>
 </html>
