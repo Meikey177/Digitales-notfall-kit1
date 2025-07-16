@@ -59,21 +59,34 @@
     .btn {
       @apply px-5 py-3 rounded-full text-sm font-bold inline-flex items-center gap-2 border border-black shadow-md hover:scale-105 active:scale-95 transition duration-200 ease-in-out;
     }
+    .btn i {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
   </style>
 
 </head>
 <body class="font-body bg-bone text-grime dark:bg-grime dark:text-bone">
 
-  <header class="flex justify-between items-center px-6 py-4 bg-punkPurple text-acidYellow sticky top-0 z-50 shadow-md">
-    <h1 class="text-2xl md:text-3xl font-headline">👁️ Digital First Aid Kit</h1>
+  <!-- Header -->
+  <header class="flex justify-between items-center px-8 py-6 bg-punkPurple text-acidYellow sticky top-0 z-50 shadow-md text-lg md:text-xl">
+    <h1 class="text-3xl md:text-5xl font-headline">👁️ Digital First Aid Kit</h1>
     <div class="flex gap-2">
-      <button id="restart-btn" class="btn bg-acidYellow text-black hover:bg-yellow-300"><i data-lucide="flame"></i> Burn it</button>
-      <button id="darkmode-toggle" class="btn bg-acidYellow text-black hover:bg-yellow-300"><i data-lucide="moon"></i></button>
+      <button id="restart-btn" class="btn bg-acidYellow text-black hover:bg-yellow-300">
+        <i data-lucide="flame"></i> Burn it
+      </button>
+      <button id="darkmode-toggle" class="btn bg-acidYellow text-black hover:bg-yellow-300">
+        <i data-lucide="moon"></i>
+      </button>
     </div>
   </header>
 
+  <!-- Main Container -->
   <main id="app-container" class="max-w-3xl mx-auto px-4 py-6">
 
+    <!-- Add your static content here (intro, modules, etc.) -->
+
+    <!-- Module logic -->
     <div id="intro-page-1" class="bg-grime text-bone p-8 rounded-lg shadow-xl border-4 border-rebelPink">
       <h2 class="font-headline text-4xl mb-4 text-acidYellow">👁️ Meet Your Digital Shadow</h2>
       <p class="mb-6">
@@ -129,12 +142,34 @@
 
   </main>
 
+  <!-- ✅ Updated JavaScript with Zine Questions -->
   <script>
     const modules = {
       en: [
-        { question: 'What gave you away digitally?', options: { A: 'Google Maps 🗺️', B: 'Phone in pocket 📱', C: 'Sneaky sneaker selfie 📸' } },
-        { question: 'Why hasn’t your crush replied?', options: { A: 'Metadata says: obsessed 🧠', B: 'Spyware blocked you 🤖', C: 'AI flagged the flirt 🚨' } },
-        { question: 'Why are you suddenly getting ads for anonymous SIM cards?', options: { A: 'Cookies, baby 🍪', B: 'You’ve been read 📡', C: 'Your data is a tattoo 💀' } }
+        {
+          question: 'You crashed a protest Friday night — vibes immaculate, rage justified. But your phone came too (classic). What’s most likely to rat you out?',
+          options: {
+            A: 'Opened Maps for like two seconds. Sorry for not having internal GPS, Big Brother.',
+            B: 'Phone was in my pocket the whole time. Just chillin’. Definitely not tracking my every move.',
+            C: 'Snapped a sneaker selfie mid-demo. Can’t let civil unrest stop the drip.'
+          }
+        },
+        {
+          question: 'You finally messaged your crush — into abolition, privacy, and probably emotionally unavailable. You pitch a collab on AI surveillance at Hamburg Hbf (plus a lil hangout?). But... silence. What went wrong?',
+          options: {
+            A: 'You used encryption — sweet. But the metadata screamed: in love and extremely online.',
+            B: 'Your phone caught spyware before you even typed “Hi.” Your crush ghosted — for cybersecurity reasons.',
+            C: 'Your message got scanned, flagged, and filed. Congrats, your romance is now part of a training dataset.'
+          }
+        },
+        {
+          question: 'Still ghosted by your crush, you dive into some “light” research on surveillance tech. The next day, you’re haunted by ads for fake security cams, anonymous SIM cards, and sketchy antivirus software. What’s really going on?',
+          options: {
+            A: 'Trackers, cookies, browser fingerprints — invisible stalkers with better memory than you.',
+            B: 'Your clicks float to the cloud, where algorithms binge-watch your every move.',
+            C: 'Congrats, you’ve been turned into a vibe — your digital self is now a neatly packaged, sellable profile.'
+          }
+        }
       ]
     };
 
